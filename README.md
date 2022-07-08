@@ -8,6 +8,8 @@
 프로젝트 루트에 .env 파일을 생성하여 아래 변수를 입력합니다.
 
 `key=value` 형식으로 각 줄에 변수를 입력합니다.
+
+`.env.example` 파일을 참고하세요.
 >`DEBUG` True | False - 개발 모드인지의 여부 
 > 
 >`SECRET_KEY` 보안을 위한 무작위 코드 - https://miniwebtool.com/django-secret-key-generator/ 에서 생성
