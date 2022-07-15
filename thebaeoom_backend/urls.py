@@ -16,6 +16,8 @@ Including another URLconf
 from django.conf.urls.static import static
 from django.contrib import admin
 from django.urls import path, include
+from django.views.static import serve
+from django.urls import re_path
 
 from thebaeoom_backend import settings
 
@@ -25,6 +27,7 @@ urlpatterns = [
     path("ajax_select/", include("ajax_select.urls")),
     path("", include("book.urls")),
     path("", include("board.urls")),
+    re_path(r"^uploads/(?P<path>.*)$", serve, {"document_root": settings.MEDIA_ROOT}),
 ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
 
 admin.site.site_header = "더배움 홈페이지"

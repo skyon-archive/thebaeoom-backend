@@ -39,3 +39,9 @@
 `poetry run python manage.py runserver` - 기본 포트 8000
 
 `poetry run python manage.py runserver <port>` - < port >에 서버가 실행될 포트 숫자 입력 ex) poetry run python manage.py runserver 8080
+
+## 기타
+
+현재 static/과 uploads/ 폴더가 django를 통해 호스팅되도록 설정되어 있으나 보안 상 안전하지 않습니다.
+
+두 주소에 대해서는 nginx 등을 통해 정적 파일을 호스팅하도록 설정하는 것을 권장합니다.
