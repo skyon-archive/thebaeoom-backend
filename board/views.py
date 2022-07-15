@@ -3,13 +3,20 @@ from rest_framework import viewsets
 from rest_framework.generics import get_object_or_404
 from rest_framework.permissions import AllowAny
 
-from board.models import Board, PartnershipRequest, ErrorRequest
+from board.models import Board, PartnershipRequest, ErrorRequest, Banner
 from board.serializers import (
     BoardListSerializer,
     BoardDetailSerializer,
     PartnershipRequestSerializer,
     ErrorRequestSerializer,
+    BannerSerializer,
 )
+
+
+class BannerViewSet(viewsets.ModelViewSet):
+    queryset = Banner.objects.all()
+    serializer_class = BannerSerializer
+    pagination_class = None
 
 
 class BoardViewSet(viewsets.ModelViewSet):

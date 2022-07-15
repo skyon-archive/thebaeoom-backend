@@ -26,8 +26,8 @@ class AuthorViewSet(viewsets.ModelViewSet):
 class BookViewSet(viewsets.ModelViewSet):
     queryset = Book.objects.all()
     filterset_fields = ["is_ebook", "publisher"]
-    search_fields = ["title"]
-    ordering = ["created_at"]
+    search_fields = ["title", "author__name", "isbn"]
+    ordering = ["-created_at"]
 
     def get_serializer_class(self):
         if self.action == "list":

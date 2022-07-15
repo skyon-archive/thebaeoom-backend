@@ -4,8 +4,30 @@ from django.db import models
 from book.models import Book
 from thebaeoom_backend.utils import get_file_upload_path
 
-BOARD_TYPE_CHOICES = [("NOTICE", "공지사항"), ("FILE", "자료실")]
+BOARD_TYPE_CHOICES = [
+    ("NOTICE", "공지사항"),
+    ("FILE", "자료실"),
+    ("ABOUT", "회사 소개"),
+    ("CONTACT", "출간 문의"),
+    ("BRAND", "브랜드 소개"),
+    ("MAP", "찾아오시는 길"),
+]
 STATUS_CHOICES = [(0, "접수"), (1, "처리 중"), (2, "처리 완료")]
+
+
+class Banner(models.Model):
+    title = models.CharField(max_length=15, verbose_name="제목")
+    image = models.ImageField(
+        upload_to=get_file_upload_path,
+        verbose_name="이미지",
+        help_text="가로 1024px, 세로 320px의 이미지를 권장합니다.",
+    )
+    link = models.TextField(verbose_name="링크")
+    created_at = models.DateTimeField(auto_now_add=True, verbose_name="생성일")
+
+    class Meta:
+        verbose_name = "배너"
+        verbose_name_plural = "배너"
 
 
 class Board(models.Model):
@@ -16,14 +38,16 @@ class Board(models.Model):
     created_at = models.DateTimeField(auto_now_add=True, verbose_name="생성일")
     view = models.PositiveIntegerField(default=0, verbose_name="조회수")
     content = RichTextUploadingField(verbose_name="본문")
-    file = models.FileField(upload_to=get_file_upload_path, verbose_name="첨부파일")
+    file = models.FileField(
+        upload_to=get_file_upload_path, verbose_name="첨부파일", null=True, blank=True
+    )
 
     def __str__(self):
         return f"{self.get_type_display()} / {self.title}"
 
     class Meta:
         verbose_name = "게시물"
-        verbose_name_plural = "보드 (공지사항/자료실)"
+        verbose_name_plural = "보드 (공지사항/자료실/회사 소개/출간 문의/브랜드 소개/찾아오시는 길)"
 
 
 class PartnershipRequest(models.Model):

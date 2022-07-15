@@ -5,18 +5,22 @@ from django.forms import TextInput, widgets
 from django.urls import reverse
 from django.utils.html import format_html
 from django.utils.safestring import mark_safe
-from board.models import Board, PartnershipRequest, ErrorRequest
+from board.models import Board, PartnershipRequest, ErrorRequest, Banner
 
 
-class HtmlWidget(widgets.Widget):
-    """A widget to display HTML in admin fields."""
+@admin.register(Banner)
+class BannerAdmin(admin.ModelAdmin):
+    list_display = ("id", "title", "get_link", "created_at")
+    list_display_links = (
+        "id",
+        "title",
+    )
+    readonly_fields = ("created_at",)
 
-    input_type = None  # Subclasses must define this.
+    def get_link(self, obj):
+        return format_html("<a href='{url}' target='_blank'>{url}</a>", url=obj.link)
 
-    def render(self, name, value, attrs=None):
-        if value is None:
-            value = ""
-        return mark_safe("%s" % value)
+    get_link.short_description = "링크"
 
 
 class BoardAdminForm(forms.ModelForm):
