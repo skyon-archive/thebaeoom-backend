@@ -13,8 +13,6 @@
 `.env.example` 파일을 참고하세요.
 >`DEBUG` True | False - 개발 모드인지의 여부 (개발 중이 아닐 경우에는 False여야 합니다.)
 >
->`FRONTEND_HOST` 프론트엔드 서버의 호스트 주소(https:// 나 http:// 제외, 맨 끝 슬래시(/) 제외) - ex) localhost, thebaeoom.com
->
 >`FRONTEND_URL` 프론트엔드 서버의 주소(맨 끝 슬래시(/) 제외) - ex) http://localhost:3000, https://thebaeoom.com
 >
 >`SECRET_KEY` 보안을 위한 무작위 코드 - https://miniwebtool.com/django-secret-key-generator/ 에서 생성
