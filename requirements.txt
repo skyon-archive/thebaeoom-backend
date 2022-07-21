@@ -1,0 +1,60 @@
+asgiref==3.5.2; python_version >= "3.8" \
+    --hash=sha256:1d2880b792ae8757289136f1db2b7b99100ce959b2aa57fd69dab783d05afac4 \
+    --hash=sha256:4a29362a6acebe09bf1d6640db38c1dc3d9217c68e6f9f6204d72667fc19a424
+django-admin-interface==0.19.1 \
+    --hash=sha256:b94bea110138a78d29c79462bcdaf79bae0b5e5ab44b7775e2581bfdd99342c4 \
+    --hash=sha256:17831521f867a356d748b12d69dd3cd7cd86f15f63f2ca777ab185d3359bf7b5
+django-admin-json-editor==0.2.3 \
+    --hash=sha256:12cf9dd1288f83f5ec83fbe2a39668e79a85e33bfbeb08157a6f5c7c4e480e20
+django-ajax-selects==2.2.0 \
+    --hash=sha256:539298874b2d26ce9e778a5173d312f55340c887a126c7e2d3460b9a5b4593a2
+django-ckeditor==6.4.2; python_version >= "3.8" \
+    --hash=sha256:db40bf9958a3f5a3e6053ff8d034a320b08050d5a385e5bd4defd6956d27e77e \
+    --hash=sha256:3f1e963376e0d79c0db8d1b44e649d394565e3a71c16c212dcc85647e529ce1b
+django-colorfield==0.7.1 \
+    --hash=sha256:a58d1c5a56f0380439dc1305a131321b839df35ddfac2a6dbcc887de02232120 \
+    --hash=sha256:08d093d5b31b599b681665ab97b957045c4a4c0b93cfc434bd257378a7193c96
+django-cors-headers==3.13.0; python_version >= "3.7" \
+    --hash=sha256:f9dc6b4e3f611c3199700b3e5f3398c28757dcd559c2f82932687f3d0443cfdf \
+    --hash=sha256:37e42883b5f1f2295df6b4bba96eb2417a14a03270cb24b2a07f021cd4487cf4
+django-environ==0.9.0; python_version >= "3.4" and python_version < "4" \
+    --hash=sha256:bff5381533056328c9ac02f71790bd5bf1cea81b1beeb648f28b81c9e83e0a21 \
+    --hash=sha256:f21a5ef8cc603da1870bbf9a09b7e5577ab5f6da451b843dbcc721a7bca6b3d9
+django-filter==22.1; python_version >= "3.7"
+django-flat-responsive==2.0 \
+    --hash=sha256:451caa2700c541b52fb7ce2d34d3d8dee9e980cf29f5463bc8a8c6256a1a6474
+django-flat-theme==1.1.4 \
+    --hash=sha256:6b522d8c2b5a8228b30947fb002eff2868da076e9beacf3e798410e5c1a2d849
+django-js-asset==2.0.0; python_version >= "3.8" \
+    --hash=sha256:86f9f300d682537ddaf0487dc2ab356581b8f50c069bdba91d334a46e449f923 \
+    --hash=sha256:adc1ee1efa853fad42054b540c02205344bb406c9bddf87c9e5377a41b7db90f
+django-jsonform==2.10.1; python_version >= "3.4" \
+    --hash=sha256:58428b41b160249bf640491dd9e9d6b6494e6b67e7ca74f0a01aebd8064b97f2 \
+    --hash=sha256:34cd70c67fd40f0418dc985e946d6bec233ad335ccad0094fbee1f8b97c460e8
+django==4.0.6; python_version >= "3.8" \
+    --hash=sha256:ca54ebedfcbc60d191391efbf02ba68fb52165b8bf6ccd6fe71f098cac1fe59e \
+    --hash=sha256:a67a793ff6827fd373555537dca0da293a63a316fe34cb7f367f898ccca3c3ae
+djangorestframework==3.13.1; python_version >= "3.6" \
+    --hash=sha256:24c4bf58ed7e85d1fe4ba250ab2da926d263cd57d64b03e8dcef0ac683f8b1aa \
+    --hash=sha256:0c33407ce23acc68eca2a6e46424b008c9c02eceb8cf18581921d0092bc1f2ee
+mysqlclient==2.1.1; python_version >= "3.5" \
+    --hash=sha256:c1ed71bd6244993b526113cca3df66428609f90e4652f37eb51c33496d478b37 \
+    --hash=sha256:c812b67e90082a840efb82a8978369e6e69fc62ce1bda4ca8f3084a9d862308b \
+    --hash=sha256:0d1cd3a5a4d28c222fa199002810e8146cffd821410b67851af4cc80aeccd97c \
+    --hash=sha256:b355c8b5a7d58f2e909acdbb050858390ee1b0e13672ae759e5e784110022994 \
+    --hash=sha256:996924f3483fd36a34a5812210c69e71dea5a3d5978d01199b78b7f6d485c855 \
+    --hash=sha256:dea88c8d3f5a5d9293dfe7f087c16dd350ceb175f2f6631c9cf4caf3e19b7a96 \
+    --hash=sha256:828757e419fb11dd6c5ed2576ec92c3efaa93a0f7c39e263586d1ee779c3d782
+pillow==9.2.0; python_version >= "3.7"
+pytz==2022.1; python_version >= "3.6" \
+    --hash=sha256:e68985985296d9a66a881eb3193b0906246245294a881e7c8afe623866ac6a5c \
+    --hash=sha256:1e760e2fe6a8163bc0b3d9a19c4f84342afa0a2affebfaa84b01b978a02ecaa7
+six==1.16.0; python_version >= "2.7" and python_full_version < "3.0.0" or python_full_version >= "3.3.0" \
+    --hash=sha256:8abb2f1d86890a2dfb989f9a77cfcfd3e47c2a354b01111771326f8aa26e0254 \
+    --hash=sha256:1e61c37477a1626458e36f7b1d82aa5c9b094fa4802892072e49de9c60c4c926
+sqlparse==0.4.2; python_version >= "3.8" \
+    --hash=sha256:48719e356bb8b42991bdbb1e8b83223757b93789c00910a616a071910ca4a64d \
+    --hash=sha256:0c00730c74263a94e5a9919ade150dfc3b19c574389985446148402998287dae
+tzdata==2022.1; sys_platform == "win32" and python_version >= "3.8" \
+    --hash=sha256:238e70234214138ed7b4e8a0fab0e5e13872edab3be586ab8198c407620e2ab9 \
+    --hash=sha256:8b536a8ec63dc0751342b3984193a3118f8fca2afe25752bb9b7fffd398552d3

@@ -2,11 +2,12 @@
 
 ## 서버 필요 환경
 1. Python 3.10 이상
-2. Poetry 패키지 매니저 (https://python-poetry.org/docs/#installation 에서 설치)
 3. MySQL 5.7
 
 ## .env
-프로젝트 루트에 .env 파일을 생성하여 아래 변수를 입력합니다.
+프로젝트 루트에 .env 파일을 생성하여 아래 변수를 입력합니다. 
+
+메모장으로 작업하는 경우 반드시 저장 시 인코딩 옵션을 "ANSI"로 설정해야 합니다.
 
 `key=value` 형식으로 각 줄에 변수를 입력합니다.
 
@@ -23,22 +24,26 @@
 > 
 >`DB_PASSWORD` mysql 비밀번호
 > 
->`DB_HOST` mysql 주소
+>`DB_HOST` mysql 주소(http:// 제외, 맨 끝 슬래시(/) 제외)
 > 
 >`DB_PORT` mysql 포트 - 기본 3306
 
+## mysql db 생성
+
+`create database thebaeoom charset utf8 collate utf8_unicode_ci;`
+
 ## 서버를 처음 시작하기 전에
-`poetry install`
+`pip install -r requirements.txt`
 
-`poetry run python manage.py migrate`
+`python manage.py migrate`
 
-`poetry run python manage.py collectstatic`
+`python manage.py collectstatic`
 
 ## 서버 실행
 
-`poetry run python manage.py runserver` - 기본 포트 8000
+`python manage.py runserver --insecure` - 기본 포트 8000
 
-`poetry run python manage.py runserver <port>` - < port >에 서버가 실행될 포트 숫자 입력 ex) poetry run python manage.py runserver 8080
+`python manage.py runserver <port> --insecure` - < port >에 서버가 실행될 포트 숫자 입력 ex) poetry run python manage.py runserver 8080
 
 ## 기타
 
