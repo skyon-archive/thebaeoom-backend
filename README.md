@@ -39,11 +39,15 @@
 
 `python manage.py collectstatic`
 
-## 서버 실행
+## 콘솔 유저 생성
+`python manage.py createsuperuser` - 이메일 주소 입력 불필요함
 
+## 서버 실행
 `python manage.py runserver --insecure` - 기본 포트 8000
 
 `python manage.py runserver <port> --insecure` - < port >에 서버가 실행될 포트 숫자 입력 ex) poetry run python manage.py runserver 8080
+
+`/admin`에서 콘솔 접속 가능
 
 ## 기타
 
