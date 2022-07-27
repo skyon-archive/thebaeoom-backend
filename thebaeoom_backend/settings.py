@@ -26,7 +26,11 @@ SECRET_KEY = env("SECRET_KEY")
 
 DEBUG = env("DEBUG")
 
-ALLOWED_HOSTS = ["127.0.0.1", env("FRONTEND_URL").split("//")[1].split(":")[0]]
+ALLOWED_HOSTS = [
+    "127.0.0.1",
+    "localhost",
+    env("FRONTEND_URL").split("//")[1].split(":")[0],
+]
 CORS_ALLOWED_ORIGINS = [env("FRONTEND_URL")]
 
 # Application definition
